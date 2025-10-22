@@ -50,6 +50,7 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 /* Menu Section */
@@ -73,24 +74,12 @@ main {
     100% { background-position: 0% 50%; }
 }
 
-.menu-section h2 {
+.menu-section h1 {
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 1.8em;
     color: #00ffff;
     text-shadow: 0 0 10px rgba(0,255,255,0.5);
-}
-
-.menu-section a {
-    color: #00cccc;
-    text-decoration: none;
-    font-size: 1.2em;
-    margin: 10px 0;
-    transition: color 0.3s, transform 0.2s;
-}
-
-.menu-section a:hover {
-    color: #fff;
-    transform: scale(1.05);
+    text-align: left;
 }
 
 .nav-btn {
@@ -105,6 +94,7 @@ main {
     transition: all 0.3s ease;
     text-shadow: 0 0 5px rgba(0,255,255,0.5);
     box-shadow: 0 0 10px rgba(0,255,255,0.2);
+    min-height: 45px;
 }
 
 .nav-btn:hover {
@@ -129,10 +119,11 @@ footer {
     align-items: center;
     gap: 50px;
     margin-bottom: 25px;
+    flex-wrap: wrap;
 }
 
 .footer-logo {
-    height: 360px; /* Same size for both logos */
+    height: 360px;
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -145,6 +136,8 @@ footer {
 .social-icons {
     display: flex;
     gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .social-link {
@@ -161,7 +154,7 @@ footer {
 }
 
 .social-link.linkedin { background: #0077b5; }
-.social-link.google { background: #db4437; }
+.social-link.google { background: #5865f2; } /* Discord color */
 .social-link.twitter { background: #1da1f2; }
 .social-link.github { background: #000; }
 
@@ -193,4 +186,88 @@ footer {
 
 .footer-bottom a:hover {
     text-decoration: underline;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .video-section {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .menu-section {
+    width: 100%;
+    padding: 20px;
+    border-left: none;
+    border-top: 2px solid rgba(0,255,255,0.3);
+    box-shadow: 0 -5px 20px rgba(0,255,255,0.1);
+    align-items: center;
+  }
+
+  .menu-section h1 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .nav-btn {
+    width: 80%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-logo {
+    height: 200px;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+  header {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .nav-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .footer-logo {
+    height: 150px;
+  }
+
+  .social-link {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2em;
+  }
+
+  .contact-section p, 
+  .contact-section h3 {
+    font-size: 0.9em;
+  }
+
+  .footer-bottom {
+    font-size: 0.8em;
+  }
 }
