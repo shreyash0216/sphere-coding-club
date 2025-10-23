@@ -259,6 +259,13 @@ footer {
     font-size: 1rem;
   }
 
+  /* Footer center logos for mobile */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
   .footer-logo {
     height: 140px;
   }
