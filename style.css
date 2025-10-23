@@ -16,19 +16,35 @@ body {
 
 /* Header */
 header {
-    width: 100%;
-    background: rgba(0,0,0,0.8);
-    padding: 15px 30px;
-    text-align: center;
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #00ffff;
-    letter-spacing: 2px;
-    border-bottom: 2px solid #00ffff;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px 30px;
+  color: #00ffff;
+  border-bottom: 2px solid #00ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logoclub {
+  height: 130px;
+  width: auto;
+  position: absolute;
+  left: 30px;
+  transition: transform 0.3s ease;
+}
+
+.logoclub:hover {
+  transform: scale(1.05);
 }
 
 header h1 {
-    margin-top: 10px;
+  font-size: 2.2em;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1.5px;
+  text-align: center;
 }
 
 /* Main Layout */
@@ -154,9 +170,10 @@ footer {
 }
 
 .social-link.linkedin { background: #0077b5; }
-.social-link.google { background: #5865f2; } /* Discord color */
-.social-link.twitter { background: #1da1f2; }
+.social-link.google { background: #000; }
+.social-link.instagram { background: #dd2a7b; }
 .social-link.github { background: #000; }
+.social-link.gmail { background: #000;}
 
 .social-link:hover {
     transform: scale(1.2);
