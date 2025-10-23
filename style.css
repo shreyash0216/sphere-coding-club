@@ -1,17 +1,17 @@
+/* Reset & Base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Body */
 body {
-    height: 100vh;
-    background-color: #303232;
-    color: white;
-    display: flex;
-    flex-direction: column;
+  background-color: #303232;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Header */
@@ -25,11 +25,12 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .logoclub {
-  height: 130px;
-  width: auto;
+  height: 120px;
   position: absolute;
   left: 30px;
   transition: transform 0.3s ease;
@@ -40,178 +41,158 @@ header {
 }
 
 header h1 {
-  font-size: 2.2em;
-  font-weight: bold;
-  margin: 0;
+  font-size: 2em;
   letter-spacing: 1.5px;
-  text-align: center;
 }
 
 /* Main Layout */
 main {
-    flex: 1;
-    display: flex;
-    height: calc(100vh - 80px);
+  flex: 1;
+  display: flex;
+  height: calc(100vh - 80px);
+  flex-wrap: wrap;
 }
 
 /* Video Section */
 .video-section {
-    position: relative;
-    width: 80%;
-    height: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .video-section video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Menu Section */
 .menu-section {
-    width: 20%;
-    background: linear-gradient(180deg, rgba(0,255,255,0.1), rgba(255,255,255,0.05), rgba(0,255,255,0.1));
-    background-size: 200% 200%;
-    animation: gradientFlow 6s ease infinite;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    border-left: 2px solid rgba(0,255,255,0.3);
-    box-shadow: -5px 0 20px rgba(0,255,255,0.1);
-}
-
-@keyframes gradientFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  width: 20%;
+  background: linear-gradient(180deg, rgba(0,255,255,0.1), rgba(255,255,255,0.05), rgba(0,255,255,0.1));
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-left: 2px solid rgba(0,255,255,0.3);
+  box-shadow: -5px 0 20px rgba(0,255,255,0.1);
 }
 
 .menu-section h1 {
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    color: #00ffff;
-    text-shadow: 0 0 10px rgba(0,255,255,0.5);
-    text-align: left;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0,255,255,0.5);
 }
 
 .nav-btn {
-    background: none;
-    border: 2px solid #00ffff;
-    color: #00ffff;
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 1.1em;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-shadow: 0 0 5px rgba(0,255,255,0.5);
-    box-shadow: 0 0 10px rgba(0,255,255,0.2);
-    min-height: 45px;
+  background: none;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
 }
 
 .nav-btn:hover {
-    background: #00ffff;
-    color: #000;
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0,255,255,0.6);
+  background: #00ffff;
+  color: #000;
+  transform: scale(1.05);
 }
 
 /* Footer */
 footer {
-    background: #202121;
-    color: #f0f6ef;
-    text-align: center;
-    padding: 40px 20px;
-    border-top: 2px solid #00ffff;
+  background: #202121;
+  color: #f0f6ef;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 2px solid #00ffff;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 
 .footer-logo {
-    height: 360px;
-    width: auto;
-    transition: transform 0.3s ease;
+  height: 280px;
+  transition: transform 0.3s ease;
 }
 
 .footer-logo:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Social Icons */
 .social-icons {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .social-link {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.8em;
-    color: white;
-    border: 2px solid transparent;
-    transition: 0.3s ease;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: white;
+  transition: 0.3s ease;
 }
 
 .social-link.linkedin { background: #0077b5; }
 .social-link.google { background: #000; }
 .social-link.instagram { background: #dd2a7b; }
 .social-link.github { background: #000; }
-.social-link.gmail { background: #000;}
+.social-link.gmail { background: #000; }
 
 .social-link:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 15px rgba(0,255,255,0.8);
-    color: white;
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(0,255,255,0.8);
 }
 
 /* Contact Section */
 .contact-section h3 {
-    margin: 20px 0 10px 0;
-}
-
-.contact-section p {
-    margin: 5px 0;
+  margin-top: 20px;
+  color: #00ffff;
 }
 
 /* Footer Bottom */
 .footer-bottom {
-    margin-top: 10px;
-    color: #00ffff;
+  margin-top: 10px;
+  color: #00ffff;
+  font-size: 0.9em;
 }
 
 .footer-bottom a {
-    color: #00ffff;
-    text-decoration: none;
+  color: #00ffff;
+  text-decoration: none;
 }
 
 .footer-bottom a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* ================= RESPONSIVE DESIGN ================= */
+/* ======= Responsive Design ======= */
 
-/* Tablets */
+/* Tablets (<=1024px) */
 @media (max-width: 1024px) {
   main {
     flex-direction: column;
-    height: auto;
   }
 
   .video-section {
@@ -221,47 +202,49 @@ footer {
 
   .menu-section {
     width: 100%;
-    padding: 20px;
+    align-items: center;
+    text-align: center;
     border-left: none;
     border-top: 2px solid rgba(0,255,255,0.3);
-    box-shadow: 0 -5px 20px rgba(0,255,255,0.1);
-    align-items: center;
   }
 
   .menu-section h1 {
-    text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .nav-btn {
     width: 80%;
     margin: 10px 0;
-    text-align: center;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    gap: 30px;
   }
 
   .footer-logo {
     height: 200px;
   }
-
-  .social-icons {
-    gap: 15px;
-  }
 }
 
-/* Mobile Phones */
+/* Mobiles (<=600px) */
 @media (max-width: 600px) {
   header {
-    font-size: 1.2em;
+    flex-direction: column;
     padding: 10px;
+  }
+
+  .logoclub {
+    position: static;
+    height: 90px;
+    margin-bottom: 10px;
   }
 
   header h1 {
     font-size: 1.4rem;
+  }
+
+  .video-section {
+    height: 35vh;
+  }
+
+  .menu-section h1 {
+    font-size: 1.3rem;
   }
 
   .nav-btn {
@@ -270,18 +253,13 @@ footer {
   }
 
   .footer-logo {
-    height: 150px;
+    height: 140px;
   }
 
   .social-link {
     width: 45px;
     height: 45px;
     font-size: 1.2em;
-  }
-
-  .contact-section p, 
-  .contact-section h3 {
-    font-size: 0.9em;
   }
 
   .footer-bottom {
